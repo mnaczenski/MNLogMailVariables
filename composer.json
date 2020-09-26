@@ -1,0 +1,31 @@
+{
+    "name": "swag/subscriber-plugin",
+    "description": "Example plugin to register a subscriber",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shopware AG"
+        }
+    ],
+    "require": {
+        "shopware/core": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "MNLogMailVariables\\MNLogMailVariables",
+        "label": {
+            "de-DE": "Logging von Mail Variablen",
+            "en-GB": "Logging of Mail Variables"
+        },
+        "description": {
+            "de-DE": "Legt die Variablen jeder Mail die versendet wird unter /error.log ab",
+            "en-GB": "Adds all variables of mails that are sent out to /error.log"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "MNLogMailVariables\\": "src/"
+        }
+    }
+}
