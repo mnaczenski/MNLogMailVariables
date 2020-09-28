@@ -17,7 +17,12 @@ class MySubscriber implements EventSubscriberInterface
 
     public function mailBeforeSent(MailBeforeValidateEvent $event)
     {
+        $context = $event->getContext();
+        
         $data = $event->getTemplateData();
+        $data = json_decode(json_encode($data), true);
+
+
         error_log(print_r($data, true)."\n", 3, getcwd().'/error.log');
     }
 }
